@@ -1,4 +1,7 @@
-nzgeom/data/
+src/nzgeom/data/coastlines/*
+src/nzgeom/data/regions/*
+
+
 
 # editor files
 *~
