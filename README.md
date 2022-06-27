@@ -7,7 +7,13 @@ Provides geospatial geometries describing New Zealand coastlines and regional ad
 ```
 pip install nzgeom
 ```
+or
 
+```
+conda install -c conda-forge nzgeom
+```
+
+`
 ## Usage Examples
 
 ``` python
