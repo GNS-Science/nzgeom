@@ -4,9 +4,10 @@ def test_coastlines():
 
     c = nzgeom.coastlines.get_NZ_coastlines()
     assert isinstance(c, geopandas.GeoDataFrame)
+    assert len(c) == 9139  # there should be 9139 polygons in the dataframe
 
 
-def test_regions_import():
+def test_regions():
     import nzgeom.regions
     import geopandas
     import shapely
