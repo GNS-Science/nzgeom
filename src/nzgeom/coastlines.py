@@ -44,7 +44,10 @@ def get_NZ_coastlines(
     )
     gdf = _geopackage_to_gpd_geodataframe(fname)
     if not include_kermadec_islands:
-        gdf = gdf.loc["Kermadec" not in gdf["grp_name"]]
-    if not include_chatham_islands_islands:
-        gdf = gdf.loc["Chatham" not in gdf["grp_name"]]
+        # testing for "!= True" (rather than "== False") gets both False
+        # (grp_name does not contain Kermadec) and None (grp_name was not set at
+        # all)
+        gdf = gdf.loc[gdf["grp_name"].str.contains("Kermadec") != True]
+    if not include_chatham_islands:
+        gdf = gdf.loc[gdf["grp_name"].str.contains("Chatham") != True]
     return gdf
