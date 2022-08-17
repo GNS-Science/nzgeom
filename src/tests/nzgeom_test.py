@@ -18,6 +18,14 @@ def test_coastlines_without_Chathams_Kermadecs():
     assert len(c) == 8945  # there should be 8945 polygons in the dataframe
 
 
+def test_coastlines_with_bbox():
+    import nzgeom.coastlines
+    import geopandas
+
+    c = nzgeom.coastlines.get_NZ_coastlines(bbox=(174.0, -36.0, 176.0, -37.0))
+    assert isinstance(c, geopandas.GeoDataFrame)
+
+
 def test_regions():
     import nzgeom.regions
     import geopandas
