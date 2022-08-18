@@ -1,0 +1,11 @@
+name: venv-nzgeom-devel
+dependencies:
+  - python=3.10
+  - geopandas
+  - rtree
+
+  # development
+  - sphinx
+  - sphinx_rtd_theme
+  - sphinx-autodoc-typehints
+  - m2r2
