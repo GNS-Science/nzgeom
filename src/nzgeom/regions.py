@@ -1,3 +1,6 @@
+"""access polygons describing New Zealand council regions
+"""
+
 from importlib.resources import files
 from pathlib import Path
 import geopandas as gpd
@@ -19,7 +22,8 @@ class NZRegions(object):
         print(self.gdf.REGC2018_V1_00_NAME.to_string(index=False))
 
     def get_region_geodataframe(self, region_name):
-        """produce GeoDataFrame containing a polygon representing a specified region of NZ"""
+        """produce GeoDataFrame containing a polygon representing a specified region of NZ
+        """
         if not self.gdf.REGC2018_V1_00_NAME.str.contains(region_name).any():
             raise ValueError(
                 f"{region_name} not available. Use list_regions() method to show list"

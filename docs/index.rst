@@ -1,5 +1,5 @@
-NZGeom
-======
+NZ Geometry
+===========
 
 Provides geospatial geometries describing New Zealand coastlines and regional administrative boundaries.
 
@@ -8,14 +8,22 @@ Provides geospatial geometries describing New Zealand coastlines and regional ad
     :toctree: generated
     :recursive:
 
-    nzgeom
+    nzgeom.coastlines
+    nzgeom.regions
+
+.. toctree::
+   :caption: User Reference
+
+   usage
+
 
 .. toctree::
     :caption: Development
     :hidden:
 
     changelog
-    GitHub <https://github.com/Timothy-W-Hilton/nzgeom>
+    GitHub <https://github.com/GNS-Science/nzgeom>
+
 
 Indices and tables
 ------------------

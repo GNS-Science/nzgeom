@@ -1,3 +1,6 @@
+"""access polygons describing New Zealand coastlines.
+"""
+
 from typing import Tuple
 from importlib.resources import files
 import geopandas as gpd
@@ -56,6 +59,12 @@ def get_NZ_coastlines(
 ) -> gpd.GeoDataFrame:
     """return a geopandas.GeoDataFrame containing the NZ coastline.
 
+    The Chatham Islands and the Kermadec Islands are east of 180 degress
+    longitude. In many plotting packages (e.g. matplotlib) with default options
+    including these islands in a plot of New Zealand causes the plot's
+    horizontal axis to span roughly -177 deg E to 177 deg E, that is, the whole
+    world.
+
     ARGS:
         include_chatham_islands: if true, include the coastline of the Chatham
             Islands in the returned geodataframe.
@@ -70,13 +79,6 @@ def get_NZ_coastlines(
         a `geopandas.GeoDataFrame
         <https://geopandas.org/en/stable/docs/user_guide/data_structures.html#geodataframe>`_
         object containing multipolygons representing New Zealand's coastlines.
-
-    NOTES:
-
-    The Chatham Islands and the Kermadec Islands are east of 180 degress
-    longitude. Including these islands in a plot of New Zealand causes the
-    plot's horizontal axis to span roughly -177 deg E to 177 deg E, that is, the
-    whole world.
 
     """
     fname = files("nzgeom.data").joinpath(

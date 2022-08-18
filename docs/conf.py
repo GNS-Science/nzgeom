@@ -37,7 +37,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.autosummary",
     "sphinx_autodoc_typehints",
-    # "m2r2",
+    "m2r2",
 ]
 
 autosummary_generate = True
