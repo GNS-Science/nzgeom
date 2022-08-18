@@ -1,6 +1,6 @@
 src/nzgeom/data/coastlines/*
 src/nzgeom/data/regions/*
-
+conda_environment.yaml
 
 
 # editor files
@@ -73,6 +73,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/generated/
 
 # PyBuilder
 target/
