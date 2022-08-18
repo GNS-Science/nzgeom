@@ -41,7 +41,7 @@ If matplotlib is available, it's easy to plot the coastline geodataframe (or add
 >>> ax.set_xlim([165, 180])
 >>> plt.show()
 ```
-<img src="doc/NZcoastlines.png" alt="NZ coastlines plot" width="400"/>
+<img src="docs/NZcoastlines.png" alt="NZ coastlines plot" width="400"/>
 
 For the council region boundaries:
 ``` python
@@ -115,7 +115,7 @@ ax.legend()
 plt.show()
 
 ```
-<img src="doc/mask_demo.png" alt="grid mask demonstration" width="400"/>
+<img src="docs/mask_demo.png" alt="grid mask demonstration" width="400"/>
 
 ## Credits
 
