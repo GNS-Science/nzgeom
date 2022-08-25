@@ -9,3 +9,7 @@ dependencies:
   - sphinx_rtd_theme
   - sphinx-autodoc-typehints
   - m2r2
+
+  - pip
+  - pip:
+      - nzgeom
