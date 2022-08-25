@@ -10,5 +10,6 @@ dependencies:
   - sphinx-autodoc-typehints
   - m2r2
 
-  pip:
-    nzgeom
+  - pip
+  - pip:
+      - nzgeom
